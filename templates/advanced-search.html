@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='advanced-search.css') }}" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}" type="text/css" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+        <title>Advanced Search</title>
+    </head>
+
+    <body>
+      <div class="tab">
+        <a href="index.html">Home</a>
+        <a class="active" href="advanced-search.html">Advanced Search</a>
+        <a href="library-busy-times.html">When is the Library Busy?</a>
+        <a href="most-popular.html">What's Most Popular?</a>
+        <a href="help.html">Help</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="warning">Don't be worried if the page seems to be stalling: the database is very large and results may take awhile to load</div>
+      <div class="warning">Be aware that items are listed with maximum one author and one publication date - just because a book does not appear when you search by a particular author does not mean that the author is not in our system</div>
+      <div class="spacer"></div>
+      <div class="row">
+        <div class="column-left">
+          <div style=" font-size: 15px; padding: 5px; border: 5px solid lightgray; margin: 5px;">
+            <div class="keyword">Keywords</div>
+            <div>
+              <p> Title </p>
+              <input type="text" id="search_title" placeholder="What if?">
+            </div>
+            <div class="full-width">
+              <p> Author </p>
+              <input type="text" id="search_author" placeholder="Randall Monroe">
+            </div>
+            <div class="full-width">
+              <p> Publication Year </p>
+              <input type="text" id="search_publication_year" placeholder="2014">
+            </div>
+            <div class="full-width">
+              <p>Media Format</p>
+              <select class="search-type" id="search_media_sub_type">
+                <option value="Book">Books</option>
+                <option value="Art">Art</option>
+                <option value="Audio Tape">Audio Tapes</option>
+                <option value="Audio Disc">Audio Discs</option>
+                <option value="Data Disc">Data Discs</option>
+                <option value="Video Disc">Video Discs</option>
+                <option value="Kit">Kits</option>
+                <option value="Music Score">Music Scores</option>
+                <option value="Periodical">Periodicals</option>
+                <option value="Film">Films</option>
+                <option value="Video Tapes">Video Tape</option>
+                <option value="Audiobook">Audiobooks</option>
+                <option value="Audiobook Disc">Audiobook Discs</option>
+                <option value="Audiobook Tape">Audiobook Tapes</option>
+                <option value="Document">Documents</option>
+                <option value="Folder">Folders</option>
+                <option value="Video">Videos</option>
+              </select>
+            </div>
+            <div class = "full-width">
+              <button id="search_button">Search</button>
+            </div>
+          </div>
+        </div>
+        <div class="column-results">
+          <div class="full-width">
+          <table id="location_results"> </table>
+          </div>
+          <h4 id="recommended_books_title"></h4>
+          <div class="full-width">
+          <div id="recommendation_instructions" style="margin-left: 10px;"></div><br>
+          <table id="search_results"> </table>
+          </div>
+        </div>
+      </div>
+      <script  type="text/javascript" src="{{ url_for('static', filename='advanced-search.js') }}"></script>
+    </body>
+</html>

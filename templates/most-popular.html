@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='most-popular.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}" type="text/css" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <title>What's most popular?</title>
+</head>
+
+<body>
+
+<div class="tab">
+    <a href="index.html">Home</a>
+    <a href="advanced-search.html">Advanced Search</a>
+    <a href="library-busy-times.html">When is the Library Busy?</a>
+    <a class="active" href="most-popular.html">What's Most Popular?</a>
+    <a href="help.html">Help</a>
+</div>
+<div class="spacer"></div>
+<div class="warning">Don't be worried if the page seems to be stalling: the database is very large and results may take awhile to load</div>
+<div class="thin-spacer"></div>
+<div class="centered">
+<div class = "adjustors">
+  <div><span style="font-size:20px;margin-top: 0.83em;margin-bottom: 0.83em;font-weight: bold;"> Popular </span>
+      <select class="media" name="media" id="media">
+        <option value="Book">Books</option>
+        <option value="Art">Art</option>
+        <option value="Audio_Tape">Audio Tapes</option>
+        <option value="Audio_Disc">Audio Discs</option>
+        <option value="Data_Disc">Data Discs</option>
+        <option value="Video_Disc">Video Discs</option>
+        <option value="Kit">Kits</option>
+        <option value="Music_Score">Music Scores</option>
+        <option value="Periodical">Periodicals</option>
+        <option value="Film">Films</option>
+        <option value="Video_Tapes">Video Tape</option>
+        <option value="Audiobook">Audiobooks</option>
+        <option value="Audiobook_Disc">Audiobook Discs</option>
+        <option value="Audiobook_Tape">Audiobook Tapes</option>
+        <option value="Document">Documents</option>
+        <option value="Folder">Folders</option>
+        <option value="Video">Videos</option>
+        <option value="" disabled="disabled">─────────────</option>
+        <option value="Collection">Collections</option>
+      </select>
+  </div>
+</div>
+<div class="thin-spacer"></div>
+<div class = "adjustors">
+  <div> <span style="font-size:20px;margin-top: 0.83em;margin-bottom: 0.83em;font-weight: bold;"> During </span>
+    <select class="month" name="month" id="month">
+      <option value="All_months">All months</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+    <select class="year" name="year" id="year">
+      <option value="0">All years</option>
+      <option value="2005">2005</option>
+      <option value="2006">2006</option>
+      <option value="2007">2007</option>
+      <option value="2008">2008</option>
+      <option value="2009">2009</option>
+      <option value="2010">2010</option>
+      <option value="2011">2011</option>
+      <option value="2012">2012</option>
+      <option value="2013">2013</option>
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+    </select>
+  </div>
+</div>
+</div>
+<table id = "popular_media_results">
+</table>
+<script type="text/javascript" src="{{ url_for('static', filename='most-popular.js') }}"></script>
+</body>
+</html>

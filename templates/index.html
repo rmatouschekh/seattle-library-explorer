@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}" type="text/css" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+        <title>Home</title>
+    </head>
+
+    <body>
+
+      <div class="tab">
+        <a class="active" href="#home">Home</a>
+        <a href="advanced-search.html">Advanced Search</a>
+        <a href="library-busy-times.html">When is the Library Busy?</a>
+        <a href="most-popular.html">What's Most Popular?</a>
+        <a href="help.html">Help</a>
+      </div>
+      <div class ="spacer"></div>
+      <div id="title">Seattle Library Explorer</div>
+      <div id="welcome">This site has information on checkout data from the Seattle Public Library System between 2005 and 2017! You can either search from here or explore the tabs to get more information. If you're confused, head over to our <a class="redirect" href="help.html">help</a> tab.</div>
+      <div>
+        <input type="text" id="search_string" placeholder="Search">
+        <button id="search_button">Search</button>
+      </div>
+      <div class="advancedSearch"> <a class="advancedSearch" href="advanced-search.html">Advanced Search</a> </div>
+      <div class="warning">Be aware that items are listed with maximum one author and one publication date - just because a book does not appear when you search by a particular author does not mean that the author is not in our system</div>
+    <table id="search_results">
+    </table>
+
+    <div class="startingData"><span id="startingDataTitle">Most Popular Books - October 2017</span><br>
+      <div class="warning">Don't be worried if the page seems to be stalling: the database is very large and results may take awhile to load</div><br>
+      <table id="starter_popular_media"> </table>
+      To further explore popular media, head to our <a class="redirect" href="most-popular.html">Most Popular</a> page.
+    </div>
+    <div id="notice">The data made available here has been modified for use from its original source, which is the City of Seattle. Neither the City of Seattle nor the Office of the Chief Technology Officer (OCTO) makes any claims as to the completeness, timeliness, accuracy or content of any data contained in this application; makes any representation of any kind, including, but not limited to, warranty of the accuracy or fitness for a particular use; nor are any such warranties to be implied or inferred with respect to the information or data furnished herein. The data is subject to change as modifications and updates are complete. It is understood that the information contained in the web feed is being used at one's own risk. </div>
+      <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+    </body>
+</html>

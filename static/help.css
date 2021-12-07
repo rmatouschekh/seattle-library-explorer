@@ -1,0 +1,23 @@
+.column {
+	margin-left: 5%;
+  float: left;
+  width: 45%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ .tab-in {
+margin-left: 5%; }
+
+.divide-line {
+  border-left: thick dotted #74d6d8;
+  height: 600px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 100;
+}

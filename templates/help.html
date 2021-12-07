@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='help.css') }}" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}" type="text/css" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+        <title>Help</title>
+    </head>
+
+    <body>
+      <div class="tab">
+        <a href="index.html">Home</a>
+        <a href="advanced-search.html">Advanced Search</a>
+        <a href="library-busy-times.html">When is the Library Busy?</a>
+        <a href="most-popular.html">What's Most Popular?</a>
+        <a class="active" href="help.html">Help</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="divide-line"></div>
+      <div class="row">
+          <div class="column">
+            <h2> What can these tabs do? </h2>
+              <h4> <a href="index.html">Home</a></h4>
+              <div class="tab-in">Can do basic searches and get general information</div>
+              <h4> <a href="advanced-search.html">Advanced Search</a></h4>
+              <div class="tab-in">Can do more complicated search of the library collection</div>
+              <h4> <a href="library-busy-times.html">When is the Library Busy?</a></h4>
+              <div class="tab-in">Can see what times of day the library is more busy by season and day of week</div>
+              <h4> <a href="most-popular.html">What's Most Popular?</a></h4>
+              <div class="tab-in">Can see what was popular by media type and what subjects have been popular</div>
+          </div>
+
+          <div class="column">
+              <h2> I'm having problems with: </h2>
+              <h4> Home</h4>
+              <div class="tab-in"> <p> The search input is applied to both the Title and Author fields and is case-insensitive.
+                  Thus "Rowling" might get results for J.K. Rowling or books with "Prowling" in the title. <br><br> For more controlled searching, go to Advanced Search.
+              </p> </div>
+              <h4> Advanced Search</h4>
+              <div class="tab-in"><p> The Title and Author fields will only restrict results to those than contain your search string.
+                  For example, searching with the title field as "hat" could return books with titles ranging from "Century of Hats" to "Whatever". <br><br>
+                  If a publication year is given, only exact matches with that field will be displayed. <br><br>
+                  Note that at most 25 results are displayed.
+              </p></div>
+              <h4> When is the Library Busy?</h4>
+              <div class="tab-in"><p>
+                  Be patient. Sorting through 91 million checkout events may take awhile.
+              </p></div>
+              <h4> What's Most Popular?</h4>
+              <div class="tab-in"><p>
+                  The "Collections" option in the dropdown menu is different that the Media Format Types. If "Collections" is selected, a table will be displayed with the most popular collections and number of items checked out from them.
+              </p></div>
+          </div>
+
+      </div>
+
+    </body>
+</html>

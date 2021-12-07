@@ -1,0 +1,68 @@
+/* from: https://www.w3schools.com/howto/howto_js_tabs.asp */
+* {
+  background-color: #d8f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #74d6d8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  border-bottom: 1px solid gray;
+}
+
+.spacer {
+  height: 46px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab a {
+  float: left;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  border-right: 1px solid gray;
+  height: 46px;
+  background-color: #74d6d8;
+}
+
+.tab a:hover {
+  background-color: #d8f3f3;
+}
+
+.tab a.active {
+  background-color: #d8f3f3;
+  border-bottom: 0px solid gray;
+}
+
+select {
+  font-size: 13px;
+}
+
+table {
+	width: 100;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  border: 1px solid black;
+	text-align:left;
+	word-wrap: break-word;
+}
+
+.warning {
+  color: #990000;
+  font-size: 12px;
+  text-align: center;
+  height: 15px;
+  margin: 5px;
+}

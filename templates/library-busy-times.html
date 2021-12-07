@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='library-busy-times.css') }}" type="text/css" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}" type="text/css" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+        <title>When is the Library Busy?</title>
+    </head>
+
+    <body>
+      <div class="tab">
+        <a href="index.html">Home</a>
+        <a href="advanced-search.html">Advanced Search</a>
+        <a class="active" href="library-busy-times.html">When is the Library Busy?</a>
+        <a href="most-popular.html">What's Most Popular?</a>
+        <a href="help.html">Help</a>
+      </div>
+      <div class = spacer></div>
+
+      <div class="row">
+          <div class="column">
+              <div class="warning">Don't be worried if the page seems to be stalling: the database is very large and results may take awhile to load</div>
+              <div class = "adjustors">
+                  <div><span style="font-size:20px;margin-top: 3em;margin-bottom: 1.245em;margin-left: 0;margin-right: 0;font-weight: bold;"> Day of the Week: </span>
+                      <select name="day_of_week" id="day_of_week">
+                          <option value="Monday">Monday</option>
+                          <option value="Tuesday">Tuesday</option>
+                          <option value="Wednesday">Wednesday</option>
+                          <option value="Thursday">Thursday</option>
+                          <option value="Friday">Friday</option>
+                          <option value="Saturday">Saturday</option>
+                          <option value="Sunday">Sunday</option>
+                      </select>
+                  </div>
+              </div>
+              <div class = "adjustors">
+                  <div class="thin-spacer"></div>
+                  <div> <span style="font-size:20px;margin-top: 1.245em;margin-bottom: 1.245em;margin-left: 0;margin-right: 0;font-weight: bold;"> Season of the Year: </span>
+                      <select class="season" id ="season">
+                          <option value="Spring">Spring</option>
+                          <option value="Summer">Summer</option>
+                          <option value="Fall">Fall</option>
+                          <option value="Winter">Winter</option>
+                          <option value="All year">All year</option>
+
+                      </select>
+                  </div>
+                  </div>
+
+          </div>
+
+          <div class="column">
+              <div style=" font-size: 15px; padding: 5px; border: 5px solid lightgray; margin: 10px;">
+                  <h2> Why are Day of Week and Season Needed?</h2>
+                  <p> Library hours vary depending on the day of the week and the season of the year</p>
+              </div>
+
+          </div>
+
+      </div>
+      <div class="chart-container">
+          <div class="chart-title" id="hourly_checkouts_title"></div>
+          <div class="ct-chart ct-perfect-fourth" id="hourly_checkouts_chart"></div>
+      </div>
+      <div style="width: 58%; margin: 20px; text-align:center;"> Horizontal axis is hour of day in military time and height of bar is number of checkouts during that hour</h4></div>
+      <script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script  type="text/javascript" src="{{ url_for('static', filename='chartist.min.js') }}"></script>
+      <script  type="text/javascript" src="{{ url_for('static', filename='library-busy-times.js') }}"></script>
+    </body>
+</html>
